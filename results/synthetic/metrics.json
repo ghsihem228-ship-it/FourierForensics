@@ -1,0 +1,101 @@
+{
+  "combined": {
+    "images": 144,
+    "precision": 0.9863013698630136,
+    "recall": 0.75,
+    "f1": 0.8520710059171598,
+    "roc_auc": 0.8880208333333333,
+    "confusion_matrix": [
+      [
+        47,
+        1
+      ],
+      [
+        24,
+        72
+      ]
+    ]
+  },
+  "threshold": 0.5,
+  "python": "3.11.17",
+  "errors": [],
+  "detectors": {
+    "resampling": {
+      "images": 144,
+      "precision": 0.7333333333333333,
+      "recall": 0.34375,
+      "f1": 0.46808510638297873,
+      "roc_auc": 0.6334635416666666,
+      "confusion_matrix": [
+        [
+          36,
+          12
+        ],
+        [
+          63,
+          33
+        ]
+      ]
+    },
+    "noise": {
+      "images": 144,
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "roc_auc": 0.7447916666666666,
+      "confusion_matrix": [
+        [
+          48,
+          0
+        ],
+        [
+          72,
+          24
+        ]
+      ]
+    },
+    "jpeg": {
+      "images": 48,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          24,
+          0
+        ],
+        [
+          0,
+          24
+        ]
+      ]
+    }
+  },
+  "operations": {
+    "double_jpeg": {
+      "images": 24,
+      "flagged": 24
+    },
+    "original": {
+      "images": 24,
+      "flagged": 0
+    },
+    "resize": {
+      "images": 24,
+      "flagged": 24
+    },
+    "rotation": {
+      "images": 24,
+      "flagged": 0
+    },
+    "single_jpeg": {
+      "images": 24,
+      "flagged": 1
+    },
+    "splice": {
+      "images": 24,
+      "flagged": 24
+    }
+  }
+}

@@ -1,0 +1,870 @@
+{
+  "seed": 1000,
+  "count": 24,
+  "samples": [
+    {
+      "path": "Au/1000_original.png",
+      "label": 0,
+      "group": "1000",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1000_single_jpeg.jpg",
+      "label": 0,
+      "group": "1000",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1000_resize.png",
+      "label": 1,
+      "group": "1000",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1000_rotation.png",
+      "label": 1,
+      "group": "1000",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1000_splice.png",
+      "label": 1,
+      "group": "1000",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1000_double_jpeg.jpg",
+      "label": 1,
+      "group": "1000",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1001_original.png",
+      "label": 0,
+      "group": "1001",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1001_single_jpeg.jpg",
+      "label": 0,
+      "group": "1001",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1001_resize.png",
+      "label": 1,
+      "group": "1001",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1001_rotation.png",
+      "label": 1,
+      "group": "1001",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1001_splice.png",
+      "label": 1,
+      "group": "1001",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1001_double_jpeg.jpg",
+      "label": 1,
+      "group": "1001",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1002_original.png",
+      "label": 0,
+      "group": "1002",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1002_single_jpeg.jpg",
+      "label": 0,
+      "group": "1002",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1002_resize.png",
+      "label": 1,
+      "group": "1002",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1002_rotation.png",
+      "label": 1,
+      "group": "1002",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1002_splice.png",
+      "label": 1,
+      "group": "1002",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1002_double_jpeg.jpg",
+      "label": 1,
+      "group": "1002",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1003_original.png",
+      "label": 0,
+      "group": "1003",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1003_single_jpeg.jpg",
+      "label": 0,
+      "group": "1003",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1003_resize.png",
+      "label": 1,
+      "group": "1003",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1003_rotation.png",
+      "label": 1,
+      "group": "1003",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1003_splice.png",
+      "label": 1,
+      "group": "1003",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1003_double_jpeg.jpg",
+      "label": 1,
+      "group": "1003",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1004_original.png",
+      "label": 0,
+      "group": "1004",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1004_single_jpeg.jpg",
+      "label": 0,
+      "group": "1004",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1004_resize.png",
+      "label": 1,
+      "group": "1004",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1004_rotation.png",
+      "label": 1,
+      "group": "1004",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1004_splice.png",
+      "label": 1,
+      "group": "1004",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1004_double_jpeg.jpg",
+      "label": 1,
+      "group": "1004",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1005_original.png",
+      "label": 0,
+      "group": "1005",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1005_single_jpeg.jpg",
+      "label": 0,
+      "group": "1005",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1005_resize.png",
+      "label": 1,
+      "group": "1005",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1005_rotation.png",
+      "label": 1,
+      "group": "1005",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1005_splice.png",
+      "label": 1,
+      "group": "1005",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1005_double_jpeg.jpg",
+      "label": 1,
+      "group": "1005",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1006_original.png",
+      "label": 0,
+      "group": "1006",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1006_single_jpeg.jpg",
+      "label": 0,
+      "group": "1006",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1006_resize.png",
+      "label": 1,
+      "group": "1006",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1006_rotation.png",
+      "label": 1,
+      "group": "1006",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1006_splice.png",
+      "label": 1,
+      "group": "1006",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1006_double_jpeg.jpg",
+      "label": 1,
+      "group": "1006",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1007_original.png",
+      "label": 0,
+      "group": "1007",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1007_single_jpeg.jpg",
+      "label": 0,
+      "group": "1007",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1007_resize.png",
+      "label": 1,
+      "group": "1007",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1007_rotation.png",
+      "label": 1,
+      "group": "1007",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1007_splice.png",
+      "label": 1,
+      "group": "1007",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1007_double_jpeg.jpg",
+      "label": 1,
+      "group": "1007",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1008_original.png",
+      "label": 0,
+      "group": "1008",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1008_single_jpeg.jpg",
+      "label": 0,
+      "group": "1008",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1008_resize.png",
+      "label": 1,
+      "group": "1008",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1008_rotation.png",
+      "label": 1,
+      "group": "1008",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1008_splice.png",
+      "label": 1,
+      "group": "1008",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1008_double_jpeg.jpg",
+      "label": 1,
+      "group": "1008",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1009_original.png",
+      "label": 0,
+      "group": "1009",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1009_single_jpeg.jpg",
+      "label": 0,
+      "group": "1009",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1009_resize.png",
+      "label": 1,
+      "group": "1009",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1009_rotation.png",
+      "label": 1,
+      "group": "1009",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1009_splice.png",
+      "label": 1,
+      "group": "1009",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1009_double_jpeg.jpg",
+      "label": 1,
+      "group": "1009",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1010_original.png",
+      "label": 0,
+      "group": "1010",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1010_single_jpeg.jpg",
+      "label": 0,
+      "group": "1010",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1010_resize.png",
+      "label": 1,
+      "group": "1010",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1010_rotation.png",
+      "label": 1,
+      "group": "1010",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1010_splice.png",
+      "label": 1,
+      "group": "1010",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1010_double_jpeg.jpg",
+      "label": 1,
+      "group": "1010",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1011_original.png",
+      "label": 0,
+      "group": "1011",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1011_single_jpeg.jpg",
+      "label": 0,
+      "group": "1011",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1011_resize.png",
+      "label": 1,
+      "group": "1011",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1011_rotation.png",
+      "label": 1,
+      "group": "1011",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1011_splice.png",
+      "label": 1,
+      "group": "1011",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1011_double_jpeg.jpg",
+      "label": 1,
+      "group": "1011",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1012_original.png",
+      "label": 0,
+      "group": "1012",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1012_single_jpeg.jpg",
+      "label": 0,
+      "group": "1012",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1012_resize.png",
+      "label": 1,
+      "group": "1012",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1012_rotation.png",
+      "label": 1,
+      "group": "1012",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1012_splice.png",
+      "label": 1,
+      "group": "1012",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1012_double_jpeg.jpg",
+      "label": 1,
+      "group": "1012",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1013_original.png",
+      "label": 0,
+      "group": "1013",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1013_single_jpeg.jpg",
+      "label": 0,
+      "group": "1013",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1013_resize.png",
+      "label": 1,
+      "group": "1013",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1013_rotation.png",
+      "label": 1,
+      "group": "1013",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1013_splice.png",
+      "label": 1,
+      "group": "1013",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1013_double_jpeg.jpg",
+      "label": 1,
+      "group": "1013",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1014_original.png",
+      "label": 0,
+      "group": "1014",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1014_single_jpeg.jpg",
+      "label": 0,
+      "group": "1014",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1014_resize.png",
+      "label": 1,
+      "group": "1014",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1014_rotation.png",
+      "label": 1,
+      "group": "1014",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1014_splice.png",
+      "label": 1,
+      "group": "1014",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1014_double_jpeg.jpg",
+      "label": 1,
+      "group": "1014",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1015_original.png",
+      "label": 0,
+      "group": "1015",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1015_single_jpeg.jpg",
+      "label": 0,
+      "group": "1015",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1015_resize.png",
+      "label": 1,
+      "group": "1015",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1015_rotation.png",
+      "label": 1,
+      "group": "1015",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1015_splice.png",
+      "label": 1,
+      "group": "1015",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1015_double_jpeg.jpg",
+      "label": 1,
+      "group": "1015",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1016_original.png",
+      "label": 0,
+      "group": "1016",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1016_single_jpeg.jpg",
+      "label": 0,
+      "group": "1016",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1016_resize.png",
+      "label": 1,
+      "group": "1016",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1016_rotation.png",
+      "label": 1,
+      "group": "1016",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1016_splice.png",
+      "label": 1,
+      "group": "1016",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1016_double_jpeg.jpg",
+      "label": 1,
+      "group": "1016",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1017_original.png",
+      "label": 0,
+      "group": "1017",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1017_single_jpeg.jpg",
+      "label": 0,
+      "group": "1017",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1017_resize.png",
+      "label": 1,
+      "group": "1017",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1017_rotation.png",
+      "label": 1,
+      "group": "1017",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1017_splice.png",
+      "label": 1,
+      "group": "1017",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1017_double_jpeg.jpg",
+      "label": 1,
+      "group": "1017",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1018_original.png",
+      "label": 0,
+      "group": "1018",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1018_single_jpeg.jpg",
+      "label": 0,
+      "group": "1018",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1018_resize.png",
+      "label": 1,
+      "group": "1018",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1018_rotation.png",
+      "label": 1,
+      "group": "1018",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1018_splice.png",
+      "label": 1,
+      "group": "1018",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1018_double_jpeg.jpg",
+      "label": 1,
+      "group": "1018",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1019_original.png",
+      "label": 0,
+      "group": "1019",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1019_single_jpeg.jpg",
+      "label": 0,
+      "group": "1019",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1019_resize.png",
+      "label": 1,
+      "group": "1019",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1019_rotation.png",
+      "label": 1,
+      "group": "1019",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1019_splice.png",
+      "label": 1,
+      "group": "1019",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1019_double_jpeg.jpg",
+      "label": 1,
+      "group": "1019",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1020_original.png",
+      "label": 0,
+      "group": "1020",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1020_single_jpeg.jpg",
+      "label": 0,
+      "group": "1020",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1020_resize.png",
+      "label": 1,
+      "group": "1020",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1020_rotation.png",
+      "label": 1,
+      "group": "1020",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1020_splice.png",
+      "label": 1,
+      "group": "1020",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1020_double_jpeg.jpg",
+      "label": 1,
+      "group": "1020",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1021_original.png",
+      "label": 0,
+      "group": "1021",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1021_single_jpeg.jpg",
+      "label": 0,
+      "group": "1021",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1021_resize.png",
+      "label": 1,
+      "group": "1021",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1021_rotation.png",
+      "label": 1,
+      "group": "1021",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1021_splice.png",
+      "label": 1,
+      "group": "1021",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1021_double_jpeg.jpg",
+      "label": 1,
+      "group": "1021",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1022_original.png",
+      "label": 0,
+      "group": "1022",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1022_single_jpeg.jpg",
+      "label": 0,
+      "group": "1022",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1022_resize.png",
+      "label": 1,
+      "group": "1022",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1022_rotation.png",
+      "label": 1,
+      "group": "1022",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1022_splice.png",
+      "label": 1,
+      "group": "1022",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1022_double_jpeg.jpg",
+      "label": 1,
+      "group": "1022",
+      "operation": "double_jpeg"
+    },
+    {
+      "path": "Au/1023_original.png",
+      "label": 0,
+      "group": "1023",
+      "operation": "original"
+    },
+    {
+      "path": "Au/1023_single_jpeg.jpg",
+      "label": 0,
+      "group": "1023",
+      "operation": "single_jpeg"
+    },
+    {
+      "path": "Tp/1023_resize.png",
+      "label": 1,
+      "group": "1023",
+      "operation": "resize"
+    },
+    {
+      "path": "Tp/1023_rotation.png",
+      "label": 1,
+      "group": "1023",
+      "operation": "rotation"
+    },
+    {
+      "path": "Tp/1023_splice.png",
+      "label": 1,
+      "group": "1023",
+      "operation": "splice"
+    },
+    {
+      "path": "Tp/1023_double_jpeg.jpg",
+      "label": 1,
+      "group": "1023",
+      "operation": "double_jpeg"
+    }
+  ]
+}

@@ -21,7 +21,7 @@ streamlit run app.py
 
 On Windows, use `py -3.11 -m venv .venv` and `.venv\Scripts\activate` for the first two commands. After setup, the one-command launch is **`streamlit run app.py`**. The sidebar includes six generated examples, so you can explore immediately.
 
-The stack is NumPy, SciPy, OpenCV, scikit-learn, Matplotlib, Streamlit, Pillow (image I/O and JPEG tables), and pytest. Runtime requirements are bounded in `requirements.txt`; `requirements-lock.txt` records the complete environment used for the Python 3.11 benchmark. For that environment, substitute `pip install -r requirements-lock.txt`. The lock is a tested Linux snapshot, not a cross-platform dependency guarantee.
+The stack is NumPy, SciPy, OpenCV, scikit-learn, Matplotlib, Streamlit, Pillow (image I/O and JPEG tables), and pytest. Runtime requirements are bounded in `requirements.txt`; `requirements-lock.txt` records the complete environment used for the Python 3.11 benchmark. For that environment, substitute `pip install -r requirements-lock.txt`. The lock is a tested Linux snapshot including development tools, not a cross-platform dependency guarantee.
 
 ## Project map
 
@@ -45,7 +45,7 @@ The stack is NumPy, SciPy, OpenCV, scikit-learn, Matplotlib, Streamlit, Pillow (
 
 Inputs to the numerical API are grayscale `(H,W)` or **RGB**, never OpenCV's BGR, `(H,W,3)`. Accepted dtypes are uint8, uint16, or finite floats in `[0,1]`. Detectors require at least 32 pixels per side. The loader limits uploads to 25 MiB and 16 megapixels, keeps source bytes, and does not resize or apply EXIF rotation. Display scaling does not change the analyzed pixels.
 
-Transparent inputs are composited on white and flagged. Colour-space, high-bit-depth, multi-frame, ICC, and orientation assumptions are reported. Large images can take significant CPU and memory; full-resolution analysis intentionally avoids adding resize artifacts.
+Transparent inputs are composited on white and flagged. Non-RGB/L uploads, including high-bit-depth modes, are converted to 8-bit RGB with a warning; numerical uint16 support does not imply full upload fidelity. Colour-space, high-bit-depth, multi-frame, ICC, and orientation assumptions are reported. Large images can take significant CPU and memory; full-resolution analysis intentionally avoids adding resize artifacts.
 
 ## Theory and implementation
 
@@ -177,7 +177,7 @@ g_j=\max\left(0,\frac{\max\log L_D-\max\log L_S-\frac12\log N}{N}\right),
 s_{JPEG}=\operatorname{clip}\left(\frac{\operatorname{median}_j g_j}{0.25},0,1\right).
 $$
 
-Implementation details are deliberate approximations: coefficient indices use NumPy rounding; histograms cover `-40..40` plus a tail bucket; PMFs use a fixed `[0.03,0.94,0.03]` smoothing kernel. Candidate first steps are integers `1..40,48,64,80`, restricted to $0.25\le q_1/q_2\le6$ and excluding ratios within 0.1 of one. Both models search five Laplace scales. A mode needs at least 64 blocks and 32 nonzero coefficients; at least three usable modes are required. The likelihood penalty is a heuristic, not a calibrated statistical test with a guaranteed false-positive rate.
+Implementation details are deliberate approximations: coefficient indices use NumPy rounding; histograms cover `-40..40` plus a tail bucket; PMFs use a fixed `[0.03,0.94,0.03]` smoothing kernel. Candidate first steps are integers `1..40,48,64,80`, restricted to $0.25\le q_1/q_2\le6$ and excluding ratios within 0.1 of one. Both models search five Laplace scales around the empirical mean absolute coefficient. The discrete PMF integrates primary indices from -4096 to 4096, with a probability floor and normalization. A mode needs at least 64 blocks and 32 nonzero coefficients; at least three usable modes are required. The likelihood penalty is a heuristic, not a calibrated statistical test with a guaranteed false-positive rate.
 
 **The DCT is reconstructed from decoded pixels, not read from entropy-coded JPEG coefficients.** Decoding, chroma conversion, encoder rounding, clipping, and unknown processing can obscure or imitate artifacts. Without supported JPEG bytes and enough coefficients, the detector is marked unavailable and excluded from fusion. JPEG clues are global; the spatial heatmap comes from noise analysis.
 
@@ -215,7 +215,7 @@ ruff format --check .
 python -m ipykernel install --user --name fourierforensics --display-name FourierForensics
 ```
 
-Open `notebooks/demo.ipynb` with that kernel in Jupyter or VS Code. It contains real computed outputs. During construction, all code cells were also executed sequentially with Matplotlib's Agg backend substituted for the inline display magic because this execution environment restricts Jupyter kernel networking.
+Open `notebooks/demo.ipynb` with that kernel in Jupyter or VS Code. It contains real computed outputs. The notebook was executed with a real Jupyter kernel in the project environment.
 
 To repeat actual browser upload, invalid-file, recovery, and mobile-width checks and capture screenshots:
 
@@ -226,20 +226,20 @@ python -m scripts.capture_screenshots
 
 ## Measured results
 
-Committed run: Python **3.11.17**, 24 source scenes, seeds **1000–1023**, 144 images (48 controls, 96 manipulated), threshold **0.5**. The source seeds differ from detector unit-test and UI fixtures. No training or threshold tuning occurs during evaluation. Exact scores, hashes, package versions, and configuration are in `results/synthetic/metrics.json` and `predictions.csv`.
+Committed run: Python **3.11.17**, 24 source scenes, seeds **1000–1023**, 144 images (48 controls, 96 manipulated), threshold **0.5**. The source seeds differ from detector unit-test and UI fixtures. No training or threshold tuning occurs during evaluation. Exact scores, hashes, and configuration are in `results/synthetic/metrics.json` and `predictions.csv`.
 
 | Evaluation | Images | Precision | Recall | F1 | ROC-AUC |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Combined, controlled synthetic data | 144 | 1.000 | 0.750 | 0.857 | 1.000 |
+| Combined, controlled synthetic data | 144 | 0.986 | 0.750 | 0.852 | 0.888 |
 | CASIA v2 | — | Not measured | Not measured | Not measured | Not measured |
 | Columbia | — | Not measured | Not measured | Not measured | Not measured |
 
-Confusion matrix: **TN=48, FP=0, FN=24, TP=72**. ROC-AUC measures ranking across thresholds, so it can be 1.0 while recall at the fixed threshold is 0.75. These fixtures are highly controlled and share one generator family; an AUC of 1.0 here does not establish generalization.
+Confusion matrix: **TN=47, FP=1, FN=24, TP=72**. ROC-AUC measures ranking across thresholds, whereas recall describes the fixed threshold of 0.5. These fixtures are highly controlled and share one generator family; these measurements do not establish generalization.
 
 | Operation | Count | Flagged at 0.5 | Interpretation |
 | --- | ---: | ---: | --- |
 | Original PNG | 24 | 0/24 | Negative control |
-| Single JPEG | 24 | 0/24 | Negative control |
+| Single JPEG | 24 | 1/24 | One false positive |
 | Resize | 24 | 24/24 | Detectable interpolation evidence |
 | Rotation | 24 | **0/24** | Stronger spectral clue, below the combined threshold |
 | Higher-noise splice | 24 | 24/24 | Deliberately conspicuous variance mismatch |
@@ -249,8 +249,8 @@ Individual detector results, **with different availability cohorts**:
 
 | Detector | Images | Precision | Recall | F1 | ROC-AUC |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Resampling | 144 | 1.000 | 0.354 | 0.523 | 0.818 |
-| Noise | 144 | 1.000 | 0.250 | 0.400 | 0.625 |
+| Resampling | 144 | 0.733 | 0.344 | 0.468 | 0.633 |
+| Noise | 144 | 1.000 | 0.250 | 0.400 | 0.745 |
 | JPEG (single/double JPEG subset only) | 48 | 1.000 | 1.000 | 1.000 | 1.000 |
 
 Detector rows are not directly comparable: the JPEG cohort contains only supported JPEG inputs, while the other rows include all manipulation types. The committed per-image CSV enables independent checking. Related derivatives share source scenes; image-level observations are not independent. No uncertainty interval is claimed.
@@ -292,7 +292,7 @@ Outputs are `metrics.json`, `predictions.csv`, and `evaluation.png` (ROC, precis
 
 ![Real JPEG upload with detector explanations, radial spectrum, and ELA](docs/images/streamlit-diagnostics.png)
 
-The diagnostic tab also includes peak frequencies and the first usable AC histogram. The download contains an analysis summary, availability states, and warnings. The noise map is a block anomaly map, not a ground-truth segmentation. ELA is global recompression behavior and is kept separate from the noise map.
+The diagnostic tab also includes peak frequencies. The notebook shows the first usable AC histogram. The download contains an analysis summary, availability states, and warnings. The noise map is a block anomaly map, not a ground-truth segmentation. ELA is global recompression behavior and is kept separate from the noise map.
 
 ## Limitations
 
