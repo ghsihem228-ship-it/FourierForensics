@@ -2,6 +2,8 @@
 
 [![Tests](https://github.com/ghsihem228-ship-it/FourierForensics/actions/workflows/tests.yml/badge.svg)](https://github.com/ghsihem228-ship-it/FourierForensics/actions/workflows/tests.yml)
 
+**[Try the live Streamlit app](https://fourierforensics-kchmmn3iuaaextq4mxcdxy.streamlit.app/)** — explore generated examples or upload an image.
+
 **Host an interactive demo:** follow the [Streamlit Community Cloud deployment guide](docs/DEPLOYMENT.md). Deployment uses this repository's `main` branch, `app.py`, and Python 3.11; no API keys are required.
 
 **Interpretable image-forensics clues through 2D Fourier analysis, noise statistics, and JPEG quantization.**
