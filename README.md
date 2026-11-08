@@ -1,5 +1,9 @@
 # FourierForensics
 
+[![Tests](https://github.com/ghsihem228-ship-it/FourierForensics/actions/workflows/tests.yml/badge.svg)](https://github.com/ghsihem228-ship-it/FourierForensics/actions/workflows/tests.yml)
+
+**Host an interactive demo:** follow the [Streamlit Community Cloud deployment guide](docs/DEPLOYMENT.md). Deployment uses this repository's `main` branch, `app.py`, and Python 3.11; no API keys are required.
+
 **Interpretable image-forensics clues through 2D Fourier analysis, noise statistics, and JPEG quantization.**
 
 A Python 3.11 portfolio project connecting mathematics and information security. Upload an image to inspect its original pixels, Fourier spectrum, spatial noise-anomaly map, detector scores, and explanations. Everything runs locally; no model downloads, external image services, or dataset downloads are required.
